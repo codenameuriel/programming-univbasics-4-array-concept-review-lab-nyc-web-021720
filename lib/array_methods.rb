@@ -25,15 +25,15 @@ end
 def find_min_value(array)
     current = array
     hold = []
-    while current.length > 1 do
-        current.length.times do |i|
+    while current.length > 1 {
+        current.length.times do |i| {
             if current[i] <= current[-1] && hold.include?(current[i]) == false
                 hold.push(current[i])
             end
-        end
+        }
         hold.reverse!
         current = hold.pop(hold.length)
-    end    
+    }   
     return current[0]
 end
 
